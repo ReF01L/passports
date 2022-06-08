@@ -13,3 +13,8 @@ class Barsa(models.Model):
     gunlic = models.CharField(max_length=32, blank=True, default='нет')
     crime = models.CharField(max_length=32, blank=True, default='нет')
     image = models.ImageField(upload_to=upload_path, blank=True, null=True, default=None)
+
+
+class Profile(models.Model):
+    login = models.CharField(max_length=64)
+    password = models.CharField(max_length=32)

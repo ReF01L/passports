@@ -4,10 +4,11 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-from passport.views import BarsaViewSet
+from passport.views import BarsaViewSet, ProfileViewSet
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'passports', BarsaViewSet, basename='passports')
+router.register(r'login', ProfileViewSet, basename='login')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
